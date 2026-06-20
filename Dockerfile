@@ -9,7 +9,7 @@ RUN <<EOF
     mkdir /config
     # Mirror ZMK repository to make it easier to reference both branches and
     # tags without remote namespacing
-    git clone --mirror https://github.com/IntenseWiggling/zmk-moergo-zmk2572 /zmk
+    git clone --mirror https://github.com/IntenseWiggling/zmk-moergo /zmk
     GIT_DIR=/zmk git worktree add --detach /src
 EOF
 
@@ -28,7 +28,7 @@ COPY --chmod=755 <<EOF /bin/entrypoint.sh
     set -euo pipefail
     : "\${BRANCH:=zephyr-4-1-disable-endpoint-fallback}"
 
-    echo "Checking out \$BRANCH from IntenseWiggling/zmk-moergo-zmk2572" >&2
+    echo "Checking out \$BRANCH from IntenseWiggling/zmk-moergo" >&2
     cd /src
     git fetch origin
     git checkout -q --detach "\$BRANCH"
