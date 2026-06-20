@@ -11,7 +11,7 @@ jobs:
           submodules: recursive
       - uses: actions/checkout@v4
         with:
-          repository: IntenseWiggling/zmk-moergo-zmk2572
+          repository: IntenseWiggling/zmk-moergo
           ref: zephyr-4-1-zmk-pr3375
           path: src
       - uses: cachix/install-nix-action@v25
