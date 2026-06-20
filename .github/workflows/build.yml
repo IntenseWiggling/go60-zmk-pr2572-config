@@ -11,8 +11,8 @@ jobs:
           submodules: recursive
       - uses: actions/checkout@v4
         with:
-          repository: moergo-sc/zmk
-          ref: main
+          repository: IntenseWiggling/zmk-moergo-zmk2572
+          ref: zephyr-4-1-disable-endpoint-fallback
           path: src
       - uses: cachix/install-nix-action@v25
         with:
