@@ -30,3 +30,5 @@ jobs:
         with:
           name: go60.uf2
           path: go60.uf2
+      - name: Hunt for ELF
+        run: find /nix/store -name 'zmk.elf' -mmin -30
